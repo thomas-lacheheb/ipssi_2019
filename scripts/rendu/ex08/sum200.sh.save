@@ -1,0 +1,11 @@
+#!/bin/bash
+
+result=0
+
+echo $1
+
+for i in {$1..$};
+	do result=$(($result+$i))
+done
+
+echo $result;
