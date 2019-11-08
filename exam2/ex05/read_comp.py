@@ -1,6 +1,7 @@
-#!/bin/python3
+#!/bin/usr/python3
+teststr = 'image:'
 
-f = open("docker-compose.yml", "r")
-print(f.read())
-fulltext = f.read()
-print(fulltext.strip())
+with open('docker-compose.yml') as f:
+   for line in f:
+       if teststr in line:
+           print(line.strip().split(':', 1)[1])
