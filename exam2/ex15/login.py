@@ -7,6 +7,6 @@ pwd = sys.argv[1]
 
 print(pwd)
 
-result = hashlib.new(pwd)
-
-print(result)
+result = hashlib.md5(pwd)
+result.update(b"ok")
+print(result.hexdigest())
