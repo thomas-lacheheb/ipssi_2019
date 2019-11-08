@@ -9,4 +9,9 @@ Voici mes fichiers d'examen :
 - ex06 : script python
 - ex07 : script shell
 - ex08 : script shell
-
+- ex10 : script python
+- ex11 : fichier Dockerfile
+- ex12 : Non fait
+- ex13 : script shell
+- ex14 : Non fait
+- ex15 : Non fini
