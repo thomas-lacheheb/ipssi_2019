@@ -1,4 +1,4 @@
-#!/bin/usr/python3
+#!/usr/bin/python3
 teststr = 'image:'
 
 with open('docker-compose.yml') as f:

@@ -1,12 +1,13 @@
 #!/usr/bin/python3
 
-import sys
 import hashlib
 
-pwd = sys.argv[1]
-
-print(pwd)
-
-result = hashlib.md5(pwd)
-result.update(b"ok")
-print(result.hexdigest())
+def compare_pass(testpwd):
+    hashCorrectPwd= hashlib.md5(str.encode("ipssi")).hexdigest()
+    hashTestPwd = hashlib.md5(str.encode(testpwd)).hexdigest()
+    print('md5 "ipssi":', hashCorrectPwd)
+    print('md5   pass :', hashTestPwd)
+    if hashCorrectPwd == hashTestPwd:
+        return True
+    else:
+        return False

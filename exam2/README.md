@@ -1,17 +1,9 @@
-#Examen du 08-11-2019
+# Examen 2
 
-Voici mes fichiers d'examen :
-- ex01 : script shell
-- ex02 : script shell
-- ex03 : script python
-- ex04 : script python
-- ex05 : script python
-- ex06 : script python
-- ex07 : script shell
-- ex08 : script shell
-- ex10 : script python
-- ex11 : fichier Dockerfile
-- ex12 : Non fait
-- ex13 : script shell
-- ex14 : Non fait
-- ex15 : Non fini
+Voici mes fichiers d'examen du 2019-11-08
+
+* ex01
+* ex02 idem
+* ex11 je n'ai pas réussi exemple de code
+
+``ls -l``
