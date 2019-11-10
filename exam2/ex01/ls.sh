@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if ls $1>/dev/null;then
+if ls $1>/dev/null 2>/dev/null;then
 	ls $1 >> /tmp/ls.log
 	echo "ls ok"
 else
