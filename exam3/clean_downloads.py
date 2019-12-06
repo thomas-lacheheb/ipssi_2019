@@ -16,6 +16,7 @@ def clean_downloads(path):
         else:
             dateOfFile = datetime.fromtimestamp(os.stat(path+aFile).st_mtime)
             tenDayOfDiff = (datetime.now())+timedelta(days=-10)
+            print(dateOfFile)
             if dateOfFile < tenDayOfDiff:
                 filesToDel.append(aFile)
                 continue
@@ -26,11 +27,19 @@ def clean_downloads(path):
     if len(filesToDel) > 0:
         print(strToPrintForDel)
         for aFileToDel in filesToDel:
-            print(aFileToDel)
+            print("os.remove('"+path+aFileToDel+"')")
     if len(filesToMove) > 0:
         print(strToPrintForMove)
         for aFileToMove in filesToMove:
-            print(aFileToMove)
+            # print(aFileToMove)
+            dateOfFileForFolder = datetime.fromtimestamp(os.stat(path+aFileToMove).st_mtime).strftime("%Y-%m")
+            pathToCreate = path+str(dateOfFileForFolder)
+            print(pathToCreate)
+            if not os.path.exists(path+str(dateOfFileForFolder)+"/"+aFileToMove):
+                os.makedirs(path+str(dateOfFileForFolder)+"/"+aFileToMove)
+            print(dateOfFileForFolder)
+            print("os.replace('"+path+aFileToMove+"', '"+path+str(dateOfFileForFolder)+"/"+aFileToMove+"')")
+
     # return filesToMove
 
 if __name__ == "__main__":
