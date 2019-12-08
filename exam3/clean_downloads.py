@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import sys
 import os
 from datetime import datetime
@@ -39,7 +41,6 @@ def clean_downloads(path):
                 os.makedirs(path+str(dateOfFileForFolder)+"/"+aFileToMove)
             print(dateOfFileForFolder)
             print("os.replace('"+path+aFileToMove+"', '"+path+str(dateOfFileForFolder)+"/"+aFileToMove+"')")
-
     # return filesToMove
 
 if __name__ == "__main__":
