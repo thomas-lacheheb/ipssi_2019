@@ -1,0 +1,21 @@
+- name: Ansible exercices
+  hosts: all
+  become: yes
+  become_user: root
+  tasks:
+    - name: update all packages
+      command: sudo apt-get update
+
+    - name: install nginx package
+      command: sudo apt-get install nginx
+
+    - name: copy myNginx.j2
+      template:
+        src: myNginx.j2
+        dest: /etc/nginx/nginx.conf 
+
+    - name: verify nginx.conf
+      command: sudo nginx -t
+
+    - name: restart nginx
+      command: sudo service nginx restart
