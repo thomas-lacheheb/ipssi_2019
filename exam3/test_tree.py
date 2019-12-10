@@ -18,7 +18,29 @@ class TestUM(unittest.TestCase):
         self.assertEqual( show_tree(5), "  x  \n xxx \nxxxxx\n xxx \n xxx ")
 
     def test_tree30(self):
-        self.assertEqual( show_tree(30), "")  
+        self.assertEqual( show_tree(30), """                x
+               xxx
+              xxxxx
+             xxxxxxx
+            xxxxxxxxx
+           xxxxxxxxxxx
+          xxxxxxxxxxxxx
+         xxxxxxxxxxxxxxx
+        xxxxxxxxxxxxxxxxx
+       xxxxxxxxxxxxxxxxxxx
+      xxxxxxxxxxxxxxxxxxxxx
+     xxxxxxxxxxxxxxxxxxxxxxx
+    xxxxxxxxxxxxxxxxxxxxxxxxx
+   xxxxxxxxxxxxxxxxxxxxxxxxxxx
+  xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+               xxx
+               xxx
+               xxx
+               xxx
+               xxx
+               xxx
+               xxx""")  
 
 if __name__ == '__main__':
     unittest.main()

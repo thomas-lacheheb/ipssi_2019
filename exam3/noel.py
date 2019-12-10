@@ -25,11 +25,11 @@ def show_noel(allArg):
     dateToNextChristmas = datetime.strptime(str(yearForChristmas)+"-12-25", "%Y-%m-%d")
     daysBfChristmas = str(abs((dateToNextChristmas - theDate).days))+" days before christmas\n"
 
-    for i in daterange(theDate, dateToNextChristmas):
-        # c = calendar.TextCalendar(calendar.MONDAY)
-        # allCalendarToPrint += c.formatmonth(theDate.year, theDate.month, 5, 1)
-        # print(allCalendarToPrint)
-        print(i.strftime('%Y-%m-%d').timedelta(days=30))
+    # for i in daterange(theDate, dateToNextChristmas):
+    #     # c = calendar.TextCalendar(calendar.MONDAY)
+    #     # allCalendarToPrint += c.formatmonth(theDate.year, theDate.month, 5, 1)
+    #     # print(allCalendarToPrint)
+    #     print(i.strftime('%Y-%m-%d').timedelta(days=30))
 
     c = calendar.TextCalendar(calendar.MONDAY)
     firstCalendar = c.formatmonth(theDate.year, theDate.month, 5, 1)
