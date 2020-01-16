@@ -1,0 +1,28 @@
+version: "3.6"
+services:
+  db:
+    image: mariadb:10.4.11-bionic
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=wordpress
+      - MYSQL_USER=wp
+      - MYSQL_PASSWORD=password
+    volumes:
+      - db:/var/lib/mysql
+  pma:
+    image: phpmyadmin/phpmyadmin:5
+    environment:
+      - PMA_HOST=db
+    ports: 
+      - 8080:80
+    depends_on:
+      - db
+  wp:
+    image: wordpress:5.3.2-php7.2-apache
+    ports: 
+      - 8000:80
+    depends_on:
+      - db
+
+volumes:
+  db:
